@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
+                echo 'Source code retrieved from GitHub.'
                 checkout scm
             }
         }
@@ -12,7 +13,7 @@ pipeline {
         stage('Test HTML Form') {
             steps {
                 echo 'Running automated HTML form tests...'
-                sh 'python3 -m unittest -v test_form.py'
+                bat 'python -m unittest -v test_form.py'
             }
         }
     }
