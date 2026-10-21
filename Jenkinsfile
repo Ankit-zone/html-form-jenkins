@@ -13,7 +13,7 @@ pipeline {
         stage('Test HTML Form') {
             steps {
                 echo 'Running automated HTML form tests...'
-                bat 'python -m unittest -v test_form.py'
+                bat '"C:\\Users\\ankit\\anaconda3\\python.exe" -m unittest -v test_form.py'
             }
         }
     }
